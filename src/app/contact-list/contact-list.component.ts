@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CONTACTS } from './../../data/contacts';
+import { Contact } from './../contact';
 
 @Component({
   selector: 'app-contact-list',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
+
+  contacts: Array<Contact> = CONTACTS;
 
   constructor() { }
 
