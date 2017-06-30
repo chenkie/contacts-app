@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
+import { ROUTES } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,10 +22,7 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'contacts', component: ContactListComponent }
-    ])
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

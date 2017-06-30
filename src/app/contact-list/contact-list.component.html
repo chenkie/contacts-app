@@ -1,4 +1,4 @@
-<div class="padded-content">
+<div class="padded-content" [ngClass]="{'col-sm-9': route.firstChild, 'col-sm-12': !route.firstChild}">
   <div class="col-md-4" *ngFor="let contact of contacts">
     <div class="thumbnail">
       <div class="caption">
@@ -8,4 +8,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="col-sm-3" *ngIf="route.firstChild">
+  <router-outlet></router-outlet>
 </div>
