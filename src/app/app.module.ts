@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
+import { ContactService } from './contact/contact.service';
+import { ContactResolverService } from './contact/contact-resolver.service';
+
 import { ROUTES } from './app.routes';
 
 @NgModule({
@@ -24,7 +27,7 @@ import { ROUTES } from './app.routes';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [ContactService, ContactResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
