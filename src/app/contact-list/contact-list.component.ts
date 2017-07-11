@@ -15,7 +15,6 @@ export class ContactListComponent implements OnInit {
   constructor(public route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.route);
   }
 
 }

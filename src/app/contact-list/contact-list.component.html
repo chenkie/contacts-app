@@ -4,7 +4,11 @@
       <div class="caption">
         <h3>{{ contact.first_name }} {{ contact.last_name }}</h3>
         <p>{{ contact.email }}</p>
-        <button class="btn btn-primary btn-sm btn-block">More Info</button>
+        <button
+          class="btn btn-primary btn-sm btn-block"
+          [routerLink]="['/contacts', contact.id]">
+            More Info
+        </button>
       </div>
     </div>
   </div>

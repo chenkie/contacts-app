@@ -1,3 +1,14 @@
-<div class="panel panel-default">
-  <div class="panel-body">Test</div>
+<div class="panel panel-default contact-panel">
+  <div class="panel-body">
+    <i class="glyphicon glyphicon-remove close-contact-detail pull-right" (click)="goToContacts()"></i>
+    <div class="text-center">
+      <img [src]="contact.picture" alt="avatar">
+    </div>
+    <h2>{{ contact.first_name }} {{ contact.last_name }}</h2>
+    <h4>{{ contact.company }}</h4>
+    <hr>
+    <p><i class="glyphicon glyphicon-envelope"></i> {{ contact.email }}</p>
+    <p><i class="glyphicon glyphicon-phone"></i> {{ contact.phone }}</p>
+    <p><i class="glyphicon glyphicon-globe"></i> {{ contact.location }}</p>
+  </div>
 </div>

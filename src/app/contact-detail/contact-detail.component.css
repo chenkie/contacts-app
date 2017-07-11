@@ -1,0 +1,11 @@
+.contact-panel {
+  position: fixed;
+  right: 0;
+  width: 25%;
+  padding-top: 70px;
+  height: 100%;
+}
+
+.close-contact-detail {
+  cursor: pointer;
+}

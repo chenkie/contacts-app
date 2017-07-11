@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CONTACTS } from './../../data/contacts';
+import { Contact } from './../contact';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-contact-detail',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactDetailComponent implements OnInit {
 
-  constructor() { }
+  contact: Contact;
+
+  constructor(public router: Router, public route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params
+      .map((params: Params) => CONTACTS.find(contact => contact.id === +params.id))
+      .subscribe((contact: Contact) => this.contact = contact);
+  }
+
+  goToContacts() {
+    this.router.navigate(['contacts']);
   }
 
 }
